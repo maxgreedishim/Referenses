@@ -4,7 +4,6 @@ public class Main {
         public Student clone() throws CloneNotSupportedException {
             return (Student) super.clone();
         }
-
     }
 
     public static void main(String[] args) throws CloneNotSupportedException {
@@ -12,7 +11,7 @@ public class Main {
         for (Student student : students) System.out.println(student);
         System.out.println("===");
         Student studentOne = new Student(); studentOne.name = "Peter"; //создаем строку
-        Student studentTwo = (Student) studentOne.clone();
+        Student studentTwo = studentOne.clone();
         students[0] = studentOne; //помещаем указатель на строку в массив
         for (Student student : students) {
             if (student == null) continue;
